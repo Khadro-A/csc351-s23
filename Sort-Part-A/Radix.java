@@ -45,9 +45,13 @@ public class Radix<T> implements Sorter<T> {
 
     // For each digit, create key getter and sorter. Call the sorter
     for (int digit=0; digit<=digitCount; digit++) {
+      // Create a getter for the digit to be sorted on
       Function<T,Integer> getter = makeDigitGetter(digit);
+      // Create a Counting sorter to sort on that digit. Supplying the max value.
       Counting<T> digitSorter = new Counting<>(getter,9);
+      // Sort on that digit
       digitSorter.sort(array);
+      // Update the iteration counter for sorting the one digit
       count += digitSorter.getCount();
     }
   } // end sort(T[])
