@@ -89,7 +89,7 @@ public class AlphaNumeric {
     }
 
     /** Comparator used to order AlphaNumerics based on the Alpha field */
-    public static Comparator<AlphaNumeric> orderAlpha = new Comparator<>() {
+    public static Comparator<AlphaNumeric> orderAlpha = new Comparator<AlphaNumeric>() {
         // This will come in handy later when recording results of experiments
         @Override
         public String toString() {
@@ -101,7 +101,7 @@ public class AlphaNumeric {
     };
 
     /** Comparator used to order AlphaNumerics based on the Number field */
-    public static Comparator<AlphaNumeric> orderNumeric = new Comparator<>() {
+    public static Comparator<AlphaNumeric> orderNumeric = new Comparator<AlphaNumeric>() {
         // This will come in handy later when recording results of experiments
         @Override
         public String toString() {
