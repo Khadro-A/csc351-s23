@@ -12,6 +12,38 @@ Please do not be shy about asking me questions. This is a lot of code and I am h
 
 **In this comparative algorithm project**, you will be implementing sorting algorithms then comparing their runtime efficiency. Each algorithm will be used to sort a collection of arrays of increasing size. The arrays will be either in increasing sorted order, decreasing sorted order, or random order to begin with. The efficiency of the algorithm will be assessed based on the actual time it takes to run the algorithm and counting the total number of iterations/comparisons executed. The final deliverable is a report that presents and discusses the results.
 
+<hr>
+
+**In Part B**, you will conduct a series of experiments using the `Analyzer` class that gathers data about the number of operations (i.e. iterations) and time in milliseconds required to sort a variety of arrays. Arrays are first created and saved to a file. In the Analyzer, arrays of increasing size, read from the file, are sorted using the specified algorithm(s). The array is read fresh from the file each time "n" is increased to be as efficient as possible with memory. Each time an array is sorted, the results are saved to the results file.
+
+There are many configurations for calling Analyzer.analyze(). These include:
+- `public void analyze(String filename, Sorter<AlphaNumeric> algorithm)`
+- `public void analyze(ArrayList<String> files, ArrayList<Sorter<AlphaNumeric>> algorithms)`
+- `public void analyze(String filename, ArrayList<Sorter<AlphaNumeric>> algorithms)`
+- `public void analyze(ArrayList<String> files, Sorter<AlphaNumeric> algorithm)`
+
+You have flexibility in what you will be testing, but there are requirements to meet regarding experiments to run. 
+
+**First, determine the maximum sized array that your system can handle.** 
+
+> My laptop sorted a 500,000 element array that was in reverse order in about 110 minutes using Insertion Sort. It sorted a 250,000 element array in reverse order in about 25 minutes. It "sorted" a 500,000 element array that was in sorted order in less than a second.
+
+1. Compare 3 sorting algorithms, all sorting the same array in a particular order (e.g. SORTED). Make the maximum "n" as large as possible.
+
+1. Compare 3 sorting algorithms, all sorting the same array in a particular order (but different than the one above). Make the maximum "n" as large as possible.
+
+1. Compare 3 sorting algorithms, all sorting the same array in a particular order (but different than the two above). Make the maximum "n" as large as possible.
+
+1. Compare a single algorithm sorting 3 arrays with different orderings.
+
+1. Design your own experiment.
+
+> **Please create a back-up of your data once it has been saved to the results file. You do not want to spend a couple of hours collecting data only to accidentally overwrite it!**
+
+The primary requirement for this project is a report of your comparative study. This is a technical report written in a professional voice. Describe all the experiments that you ran including the algorithm, array ordering, and maximum size of the array for each comparison. **Present your data in graphs.** You can open the results file in Google sheets or in Microsoft Excel and use those to produce the graphs. Be sure to label the axes and title the graphs. JUSTIFY your results by discussing the T(n) equations for each of the algorithms or the general asymptotic bounds of the algorithm. Relate those equations and/or bounds to the graphs.
+
+<hr>
+
 **In Part A**, you will implement the algorithms _Insertion_, _Counting_, and _Shell_ sort. The textbook provides the algorithm for the first 2, but do remember that it uses 1-based indexing, not 0-based. As part of your implementation of an algorithm, count the number of comparisons or iterations that are executed. There is a `count` variable in each _Sorter_ that should be reset to 0 at the start of the algorithm and incremented for each iteration. 
 
 > In Insertion Sort, increment the counter (i.e. `++count`) inside the outer loop and the inner loop. In Counting Sort, increment the counter in each of the for loops. Shell Sort uses Counting Sort, so nothing additional is needed.
