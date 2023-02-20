@@ -8,6 +8,12 @@ You may and should copy the algorithms from the textbook! Just remember to conve
 
 Please do not be shy about asking me questions. This is a lot of code and I am happy to walk you through any parts that you do not understand. I can typically debug code pretty fast - tooting my own horn :-) -- but really, I'm fast, just ask when you are stuck!
 
+If you run out of memory, you can expand the dedicated heap and stack memory using these flags (either individually or combined in the call to Main):
+
+```
+java -Xmx4G -Xss1G Main
+```
+
 <hr>
 
 **In this comparative algorithm project**, you will be implementing sorting algorithms then comparing their runtime efficiency. Each algorithm will be used to sort a collection of arrays of increasing size. The arrays will be either in increasing sorted order, decreasing sorted order, or random order to begin with. The efficiency of the algorithm will be assessed based on the actual time it takes to run the algorithm and counting the total number of iterations/comparisons executed. The final deliverable is a report that presents and discusses the results.
