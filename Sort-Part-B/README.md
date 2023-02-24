@@ -16,6 +16,14 @@ java -Xmx4G -Xss1G Main
 
 <hr>
 
+**EXAMPLE EXCERPT FROM A REPORT**
+
+Consider the test of SelectionSort that sorted an array of size 1000 and returned an iteration count of 998,900. The runtime of SelectionSort with respect to n is expressed as `T(n) = c1*n^2 - c1*n + c2`. However, for our purposes, we have eliminated all constants and are focused on the number of iterations, so the function that represents count is `T(n) = n^2 - n`. With an array of size 1000, we would expect SelectionSort to return an iteration count of 999,000. This is almost identical to the results, thus we conclude that the code is working as expected and the runtime function is correct.
+
+Looking at Graph #1 of results for Selection and Insertion Sort, we see that the runtime is the same for Selection sort regardless of the configuration of the input, and that as n increases, we are seeing a similarly shaped curve for all configurations. That is expected for Selection Sort because its worst- and best-case runtime are the same, namely Theta(n^2). This is in contrast to the results for Insertion sort, which show significant variability in the results across the different input configurations, demonstrating the range of runtime bounds from Omega(n) to O(n^2). And notice that the graph of runtimes for a sorted array with increasing n (see the blue line) is linear, which corresponds to the best-case Omega(n) bound of Insertion sort, whereas runtimes for a reverse sorted array (see green line) matches that of selection sort, which corresponds to the worst-case O(n^2) bound for Insertion Sort."
+
+<hr>
+
 **In this comparative algorithm project**, you will be implementing sorting algorithms then comparing their runtime efficiency. Each algorithm will be used to sort a collection of arrays of increasing size. The arrays will be either in increasing sorted order, decreasing sorted order, or random order to begin with. The efficiency of the algorithm will be assessed based on the actual time it takes to run the algorithm and counting the total number of iterations/comparisons executed. The final deliverable is a report that presents and discusses the results.
 
 <hr>
